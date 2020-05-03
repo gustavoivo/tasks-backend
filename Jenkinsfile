@@ -17,7 +17,7 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv('SONAR_LOCAL') {
-                sh "${scannerHome}/bin/sonar-scanner -e -Dsonar.projectKey=DeployBack"
+                sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=DeployBack"
                 }
             }
         }
